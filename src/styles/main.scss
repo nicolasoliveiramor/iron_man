@@ -1,0 +1,28 @@
+@use 'variaveis';
+@use 'footer';
+@use 'trailer';
+@use 'middle';
+@use 'hero';
+@use 'header';
+
+@font-face {
+    font-family: Iron;
+    src: url(../../assets/fonts/IRON\ MAN\ OF\ WAR\ 002\ NCV.woff2);
+}
+
+@mixin title($fontSize: 30px) {
+    font-size: $fontSize;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Iron, sans-serif;
+    list-style: none;
+    scroll-behavior: smooth;
+}
+
+.title {
+    @include title()
+}

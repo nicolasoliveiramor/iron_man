@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     
     const secaoHero = document.querySelector('.hero');
-    const alturaHero = secaoHero.clientHeight;n
+    const alturaHero = secaoHero.clientHeight;
     const header = document.querySelector('.header');
     const headerLinks = document.querySelector('.header__links');
 

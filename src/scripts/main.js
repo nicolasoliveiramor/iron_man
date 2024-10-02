@@ -1,6 +1,17 @@
 document.addEventListener('DOMContentLoaded', function() {
+    
+    const form = document.querySelector('.header__menu__small__form')
+
+    document.querySelector('#button-burguer').addEventListener('click', function(){
+        if (form.classList.contains('open')) {
+            form.classList.remove('open')
+        } else {
+            form.classList.add('open')
+        }
+    })
+    
     const secaoHero = document.querySelector('.hero');
-    const alturaHero = secaoHero.clientHeight;
+    const alturaHero = secaoHero.clientHeight;n
     const header = document.querySelector('.header');
     const headerLinks = document.querySelector('.header__links');
 

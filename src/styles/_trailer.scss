@@ -1,21 +1,21 @@
 @use 'variaveis';
 
 .trailer {
-    width: 100%;
-    min-height: 80vh;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 2em 0;
 
     &__container {
         text-align: center;
         font-size: x-large;
 
-        @media (max-width: 768px) {
+        @media (max-width: 540px) {
             .trailer {
                 &__container {
                     &__video {
-                        width: 400px;
+                        width: 300px;
                     }
                 }
             }

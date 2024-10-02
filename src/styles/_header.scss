@@ -8,13 +8,85 @@
     background-color: variaveis.$corPrincipal;
     transition: all 1s ease;
 
+    @media (max-width: 768px) {
+        .header {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            
+            &__container {
+                justify-content: space-around;
+                padding: 8px;
+            }
+
+            &__logo {
+                margin: 0 auto;
+                transition: all 2s ease;
+                padding: 5px;
+            }
+
+            &__links {
+
+                a {
+                    display: none;
+                }
+            }
+
+            &__menu-burguer {
+                display: block;
+                
+                button {
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+                    
+                    span {
+                        width: 50px;
+                        height: 5px;
+                        margin: 10px 0;
+                        background-color: #fff;
+                        color: #fff;
+                    }
+                }
+            }
+
+            &__menu__small {
+                display: block;
+
+                &__form {
+                    max-height: 0;
+                    overflow: hidden;
+                    transition: max-height 0.5s ease-out;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    a {
+                        margin-bottom: 8px;
+                        text-decoration: none;
+                        font-size: xx-large;
+                        color: #fff;
+                    }
+                }
+
+                &__form.open {
+                    max-height: 500px;
+                }
+            }
+        }
+    }
+
     &--on-middle {
+        width: 100%;
         position: fixed;
         top: 0;
         left: 0;
 
         @media (min-width: 768px) {
             .header {
+                width: 100%;
+
                 &__container {
                     justify-content: center;
                     padding: 8px;
@@ -23,6 +95,7 @@
                 &__logo {
                     margin: 0 auto;
                     transition: all 2s ease;
+                    padding: 5px;
                 }
             }
         }
@@ -55,5 +128,22 @@
                 margin-left: 4px;
             }
         }
+    }
+
+    &__menu-burguer {
+        display: none;
+
+        span {
+            width: 50px;
+            display: block;
+            height: 5px;
+            margin: 10px 0;
+            background-color: #fff;
+            color: #fff;
+        }
+    }
+
+    &__menu__small {
+        display: none;
     }
 }
